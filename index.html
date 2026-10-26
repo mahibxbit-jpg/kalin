@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kalyan & Parde – Style Your Space</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f2ea;--ink:#1c1814;--gold:#d8b98a;--gold2:#c9a46c;--dark:#1d1a16;--mut:#7a6f62;--card:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Jost',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+a{color:inherit;text-decoration:none}
+.top{background:var(--dark);color:#e9dfd0;font-size:12px;display:flex;justify-content:space-between;gap:10px;padding:10px 5%;letter-spacing:.3px}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 5%;background:var(--bg);position:sticky;top:0;z-index:20;border-bottom:1px solid #eadfcf}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:600;line-height:1}
+.logo small{display:block;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:3px;margin-top:4px;text-align:center;font-weight:400}
+nav{display:flex;gap:34px}nav a{font-size:14px}nav a:hover{color:var(--gold2)}
+.search{flex:0 1 370px;display:flex;background:#fff;border:1px solid #ece3d4;border-radius:4px;padding:0 12px}
+.search input{border:0;outline:0;flex:1;height:38px;font:inherit;background:transparent}
+.icons{display:flex;gap:22px;align-items:center}
+.icons button{background:none;border:0;cursor:pointer;position:relative;color:var(--ink)}
+.badge{position:absolute;top:-8px;right:-9px;background:var(--dark);color:#fff;border-radius:50%;width:16px;height:16px;font-size:10px;display:grid;place-items:center}
+svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hero{position:relative;height:330px;overflow:hidden;color:#fff;background:#2a1e14}
+.hero .bg{position:absolute;inset:0;transition:opacity .8s}
+.s1{background:
+ radial-gradient(ellipse at 22% 85%,rgba(176,140,98,.55),transparent 45%),
+ linear-gradient(90deg,#1a110a 0%,rgba(40,28,18,.75) 38%,rgba(0,0,0,0) 62%),
+ repeating-linear-gradient(90deg,#c8a97c 0 14px,#e4d0b0 14px 30px,#b99468 30px 44px,#d9be94 44px 62px)}
+.s2{background:linear-gradient(90deg,#1a110a 0%,rgba(40,28,18,.7) 40%,rgba(0,0,0,0) 65%),repeating-linear-gradient(90deg,#6e2b34 0 16px,#8c3c46 16px 34px,#4f1c25 34px 48px)}
+.s3{background:linear-gradient(90deg,#14110d 0%,rgba(30,24,16,.7) 40%,rgba(0,0,0,0) 65%),repeating-linear-gradient(90deg,#d9cdb8 0 18px,#efe6d4 18px 40px,#c4b69c 40px 56px)}
+.hero .drape{position:absolute;right:20%;top:0;bottom:0;width:230px;background:repeating-linear-gradient(90deg,#1e1710 0 10px,#4b3a26 10px 22px,#2a1f14 22px 34px),#000;opacity:.9;box-shadow:inset 0 0 0 1px #5a4630,-30px 0 60px rgba(0,0,0,.4)}
+.hero .drape::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(201,164,108,.45) 1.6px,transparent 2.2px) 0 0/14px 14px}
+.hero .in{position:relative;padding:34px 5% 0;max-width:640px}
+.eyebrow{letter-spacing:4px;color:var(--gold);font-size:13px;margin:10px 0 14px}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:54px;line-height:1.1;color:var(--gold)}
+.hero h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:42px;line-height:1.1;margin-bottom:16px}
+.hero p{max-width:440px;line-height:1.6;font-size:15px;margin-bottom:24px}
+.btn{display:inline-block;background:var(--gold);color:#2a1e12;padding:14px 26px;border-radius:3px;letter-spacing:2px;font-size:13px;font-weight:500;border:0;cursor:pointer}
+.tags{position:absolute;right:4%;top:60px;border-left:1px solid rgba(255,255,255,.35);padding-left:24px;display:flex;flex-direction:column;gap:20px;font-size:11px;letter-spacing:2px;color:#e4d6c0}
+.dots{position:absolute;left:50%;bottom:14px;display:flex;gap:6px;transform:translateX(-50%)}
+.dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}.dots i.on{width:18px;border-radius:6px;background:#fff}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:18px 5% 0}
+.col{height:195px;position:relative;overflow:hidden;display:flex;align-items:center;padding-left:36px;box-shadow:0 2px 10px rgba(80,60,30,.15)}
+.col .tx{position:relative;z-index:2}
+.col h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:32px;line-height:1.1;margin:2px 0 6px}
+.col .sm{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px}
+.col p{color:#3b332a;margin-bottom:16px}
+.dk{background:var(--dark);color:#fff;padding:11px 22px;font-size:12px;letter-spacing:1.5px;display:inline-block}
+.c1{background:linear-gradient(90deg,#efe3d0 0 38%,transparent 62%),radial-gradient(circle,rgba(160,120,60,.55) 1.5px,transparent 2.2px) 0 0/13px 13px,repeating-linear-gradient(115deg,#d9c49b 0 30px,#4d6a55 30px 52px,#c9a46c 52px 84px,#f0e2c6 84px 108px,#7a3b3b 108px 128px)}
+.c2{background:linear-gradient(90deg,#eadccb 0 38%,transparent 60%),repeating-linear-gradient(90deg,#e2cfb3 0 22px,#cdb594 22px 46px,#f1e6d3 46px 70px,#8d8472 70px 96px,#2c241b 96px 120px,#e8d9bd 120px 150px)}
+.sec{padding:22px 5% 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px}
+.head h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:26px;display:flex;align-items:center;gap:14px}
+.head h3::before{content:"";width:30px;height:3px;background:var(--gold2)}
+.head p{color:var(--mut);margin-left:44px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.card{background:var(--card);padding:0 0 8px;box-shadow:0 1px 6px rgba(80,60,30,.12);position:relative}
+.img{height:125px;position:relative;box-shadow:inset 0 -30px 40px rgba(0,0,0,.18),inset 0 20px 30px rgba(255,255,255,.12)}
+.heart{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:5px;border:0;background:rgba(40,30,20,.35);color:#fff;display:grid;place-items:center;cursor:pointer}
+.heart.on{background:#fff;color:#b33}.heart.on svg{fill:#b33}
+.card h4{font-weight:500;font-size:13px;padding:10px 10px 2px}
+.price{padding:0 10px 8px;font-weight:500;font-size:15px}.price s{color:#b3a99a;font-weight:300;font-size:13px;margin-left:6px}
+.add{margin:0 8px;width:calc(100% - 16px);background:#dfc29a;border:0;padding:9px;font:inherit;font-size:13px;cursor:pointer;display:flex;gap:8px;justify-content:center;align-items:center}
+.add:hover{background:var(--gold2)}.add svg{width:16px;height:16px}
+.foot{background:var(--dark);color:#e6dccd;margin-top:26px;padding:26px 5%;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.feat{display:flex;gap:26px;flex-wrap:wrap}.feat div{display:flex;gap:14px;align-items:center;font-size:12px;color:#bdb2a2}.feat b{display:block;font-weight:400;color:#f1e8d9;font-size:13px}
+.feat svg{width:34px;height:34px;stroke-width:1.2}
+.sub b{font-weight:400;font-size:13px;display:block;margin-bottom:8px}
+.sub form{display:flex;gap:8px}.sub input{padding:11px;width:250px;border:0;border-radius:3px;font:inherit}
+.sub button{background:var(--gold);border:0;padding:0 18px;border-radius:3px;font:inherit;cursor:pointer}
+.copy{background:#12100d;color:#9d927f;text-align:center;font-size:12px;padding:12px}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.35);z-index:30}
+.wa svg{width:30px;height:30px;fill:#fff;stroke:none}
+.drawer{position:fixed;top:0;right:-400px;width:360px;max-width:100%;height:100%;background:#fff;z-index:40;transition:right .3s;padding:20px;display:flex;flex-direction:column;box-shadow:-6px 0 20px rgba(0,0,0,.2)}
+.drawer.open{right:0}.drawer h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;margin-bottom:12px}
+#items{flex:1;overflow:auto}.it{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid #eee;align-items:center}
+.it button{border:1px solid #ddd;background:#fff;width:24px;height:24px;cursor:pointer}
+.tot{display:flex;justify-content:space-between;font-weight:500;padding:14px 0;font-size:16px}
+.ord{background:#25d366;color:#fff;text-align:center;padding:14px;font-weight:500;border-radius:3px}
+.x{align-self:flex-end;background:none;border:0;font-size:24px;cursor:pointer}
+@media(max-width:1000px){nav,.tags,.hero .drape{display:none}.grid{grid-template-columns:repeat(3,1fr)}.search{display:none}.top div:nth-child(1),.top div:nth-child(3){display:none}.top{justify-content:center}}
+@media(max-width:640px){.cols{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:38px}.hero h2{font-size:28px}.hero{height:380px}.sub input{width:100%}.sub form{width:100%}.sub{width:100%}}
+.hero .drape{display:none}.s1,.s2,.s3{background:none}.hero .bg svg{width:100%;height:100%;display:block}.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,6,3,.78),rgba(10,6,3,.35) 45%,transparent 72%)}.hero .in,.tags,.dots{z-index:2}.c1,.c2{background:#eee2d0}.col::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#eee2d0 0 34%,rgba(238,226,208,0) 62%)}.cbg{position:absolute;right:0;top:0;width:70%;height:100%}.img{overflow:hidden}.img svg.f{width:100%;height:100%;display:block}.card{box-shadow:0 2px 10px rgba(60,40,20,.12)}
+</style>
+</head>
+<body>
+<div class="top"><div>🚚 Free Shipping on Orders Above ₹999</div><div>Elegant Homes. Happier Lives.</div><div>Cash on Delivery Available</div></div>
+<header>
+ <a class="logo" href="#">KALYAN & PARDE<small>STYLE YOUR SPACE</small></a>
+ <nav><a href="#">Home</a><a href="#kaliyan">Kaliyan</a><a href="#parde">Parde</a><a href="#about">About Us</a><a href="https://wa.me/918445044508" target="_blank">Contact</a></nav>
+ <div class="search"><input placeholder="Search for kaliyan, parde..." id="q"><svg viewBox="0 0 24 24" style="margin:9px 0"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+ <div class="icons"><button aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.700-8 11-8 11z"/></svg></button><button aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></button><button id="cartBtn" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h10L20 7H6"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></svg><span class="badge" id="cnt">0</span></button></div>
+</header>
+
+<section class="hero">
+ <div class="bg s1" id="b1"></div><div class="bg s2" id="b2" style="opacity:0"></div><div class="bg s3" id="b3" style="opacity:0"></div>
+ <div class="drape"></div>
+ <div class="in">
+  <div class="eyebrow">PREMIUM HOME COLLECTION</div>
+  <h1>Kaliyan & Parde</h1><h2>for a More Beautiful You</h2>
+  <p>Explore our exclusive collection of premium kaliyan and parde designed to bring elegance, comfort and style to your home.</p>
+  <a class="btn" href="#trend">SHOP NOW &nbsp;→</a>
+ </div>
+ <div class="tags"><span>PREMIUM QUALITY</span><span>MODERN DESIGNS</span><span>AFFORDABLE LUXURY</span><span>MADE FOR YOUR HOME</span></div>
+ <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+</section>
+
+<div class="cols">
+ <div class="col c1" id="kaliyan"><div class="tx"><div class="sm">Premium</div><h3>Kaliyan Collection</h3><p>Traditional Craft. Timeless Beauty.</p><a class="dk" href="#trend" data-f="Kaliyan">EXPLORE KALIYAN →</a></div></div>
+ <div class="col c2" id="parde"><div class="tx"><div class="sm">Elegant</div><h3>Parde Collection</h3><p>Colors that Complete Your Home.</p><a class="dk" href="#trend" data-f="Parde">EXPLORE PARDE →</a></div></div>
+</div>
+
+<section class="sec" id="trend">
+ <div class="head"><div><h3>Trending Products</h3><p>Most loved designs, just for you.</p></div><a href="#" id="all">View All Products →</a></div>
+ <div class="grid" id="grid"></div>
+</section>
+
+<section class="sec" id="about" style="text-align:center;max-width:760px;margin:0 auto;padding-top:34px">
+ <h3 class="serif" style="font-size:28px;font-weight:500">About Kalyan & Parde</h3>
+ <p style="color:var(--mut);line-height:1.7;margin-top:8px">Hum aapke ghar ke liye premium quality ke kaliyan aur parde laate hain – sahi daam par, behtareen kapde aur design ke saath. Order ya sawal ke liye seedha WhatsApp par baat karein: <a href="https://wa.me/918445044508" target="_blank"><b>+91 84450 44508</b></a></p>
+</section>
+
+<footer class="foot">
+ <div class="feat">
+  <div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg><span><b>Premium Quality</b>Only the best for your home</span></div>
+  <div><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3M3 12h18"/></svg><span><b>Secure Payments</b>100% safe & secure</span></div>
+  <div><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5l2 2M20 12a8 8 0 01-14 5l-2-2M20 4v5h-5M4 20v-5h5"/></svg><span><b>Easy Returns</b>Hassle-free shopping</span></div>
+  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 10a3 3 0 116 0c0 2-3 2-3 4M12 17h.01"/></svg><span><b>Customer Support</b>We’re always here for you</span></div>
+ </div>
+ <div class="sub"><b>Subscribe for Exclusive Offers</b><form onsubmit="event.preventDefault();this.innerHTML='<span>Thank you for subscribing!</span>'"><input type="email" placeholder="Enter your email" required><button>Subscribe</button></form></div>
+</footer>
+<div class="copy">© 2026 Kalyan & Parde · WhatsApp: +91 84450 44508</div>
+
+<a class="wa" href="https://wa.me/918445044508?text=Hello%20Kalyan%20%26%20Parde%2C%20mujhe%20products%20ke%20baare%20mein%20jaankari%20chahiye" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15L2 22l5.200-1.400A10 10 0 1012 2zm5.200 14.200c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500.2.600.8 2 .8 2.100.1.100.1.300 0 .5-.1.200-.1.300-.3.500l-.4.500c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.700-.1 1.300z"/></svg></a>
+
+<aside class="drawer" id="drawer"><button class="x" id="close">×</button><h3>Your Cart</h3><div id="items"></div><div class="tot"><span>Total</span><span id="total">₹0</span></div><a class="ord" id="order" href="#" target="_blank">Order on WhatsApp</a></aside>
+
+<script>
+const P=[
+["Embroidered Kaliyan","Kaliyan",699,999,"k","#d9c49b","#b08a52"],
+["Velvet Kaliyan","Kaliyan",799,1199,"k","#6e1f2c","#3f5a49"],
+["Royal Print Kaliyan","Kaliyan",649,899,"k","#c9a15a","#8a6428"],
+["Sheer Curtain (Parde)","Parde",899,1299,"p","#d8d2c8","#b4aca0"],
+["Blackout Curtain (Parde)","Parde",1199,1699,"p","#4a3c32","#8c7a68"],
+["Premium Linen Parde","Parde",999,1499,"p","#d9d0c0","#b8ab94"],
+["Zari Border Kaliyan","Kaliyan",849,1249,"k","#2f4a3a","#c9a46c"],
+["Jacquard Kaliyan","Kaliyan",749,1099,"k","#8a5a3c","#d8bf94"],
+["Floral Net Parde","Parde",799,1199,"p","#efe6d6","#cbbda3"],
+["Velvet Door Parde","Parde",1399,1999,"p","#5a2a33","#8a4452"],
+["Cotton Printed Kaliyan","Kaliyan",549,799,"k","#e4d5b5","#a68a5a"],
+["Silk Touch Parde","Parde",1099,1599,"p","#b99a6c","#e2cfa8"],
+["Gold Motif Kaliyan","Kaliyan",899,1299,"k","#e0cfa6","#a07a34"],
+["Maroon Zari Kaliyan","Kaliyan",949,1399,"k","#5e1a26","#d9b36c"],
+["Ivory Heritage Kaliyan","Kaliyan",699,999,"k","#efe3cc","#b39255"],
+["Emerald Brocade Kaliyan","Kaliyan",999,1499,"k","#1f4636","#d3b073"],
+["Mustard Block Print Kaliyan","Kaliyan",599,849,"k","#c79a3c","#6a4a1a"],
+["Navy Royal Kaliyan","Kaliyan",879,1299,"k","#24304a","#cfb27a"],
+["Peach Soft Kaliyan","Kaliyan",649,949,"k","#e8c3a0","#a77a52"],
+["Grey Textured Kaliyan","Kaliyan",799,1149,"k","#9a948a","#5f5a52"],
+["Beige Blackout Parde","Parde",1299,1899,"p","#cdb899","#a38e6c"],
+["Grey Velvet Parde","Parde",1499,2199,"p","#6a6862","#98948a"],
+["Cream Sheer Parde","Parde",849,1249,"p","#f0e8d8","#d8ccb4"],
+["Brown Eyelet Parde","Parde",1049,1549,"p","#6b4a35","#8e6a4e"],
+["White Voile Parde","Parde",749,1099,"p","#f4f0e8","#ddd6c8"],
+["Olive Linen Parde","Parde",1149,1699,"p","#7a7a52","#98986a"],
+["Rust Door Parde","Parde",999,1449,"p","#9a4f2e","#b86e48"],
+["Charcoal Blackout Parde","Parde",1349,1999,"p","#3a3836","#5a5754"],
+["Golden Satin Parde","Parde",1199,1799,"p","#c8a45e","#e6cc8c"],
+["Blush Window Parde","Parde",899,1299,"p","#e5cdc0","#cdb0a2"]];
+let cart={},wish={},filter="";
+const bg=p=>p[4]=="p"
+ ?`linear-gradient(180deg,rgba(255,255,255,.12),transparent 30%,rgba(0,0,0,.2)),repeating-linear-gradient(90deg,${p[5]} 0 10px,${p[6]} 10px 22px,${p[5]} 22px 30px,${p[6]} 30px 38px)`
+ :`radial-gradient(circle,rgba(230,195,120,.55) 1.4px,transparent 2px) 0 0/11px 11px,repeating-linear-gradient(115deg,${p[5]} 0 22px,${p[6]} 22px 40px,${p[5]} 40px 60px,rgba(0,0,0,.25) 60px 64px)`;
+function render(){
+ const q=document.getElementById('q').value.toLowerCase();
+ document.getElementById('grid').innerHTML=P.map((p,i)=>({p,i})).filter(({p})=>(!filter||p[1]==filter)&&p[0].toLowerCase().includes(q)).map(({p,i})=>
+ `<div class="card"><div class="img">${cf(p,i)}<button class="heart ${wish[i]?'on':''}" onclick="hw(${i})"><svg viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M12 21s-8-5.300-8-11a4.500 4.500 0 018-2.800A4.500 4.500 0 0120 10c0 5.700-8 11-8 11z"/></svg></button></div><h4>${p[0]}</h4><div class="price">₹${p[2].toLocaleString('en-IN')}<s>₹${p[3].toLocaleString('en-IN')}</s></div><button class="add" onclick="add(${i})"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.500 11h10L20 7H6"/><circle cx="9" cy="19" r="1.300"/><circle cx="17" cy="19" r="1.300"/></svg>Add to Cart</button></div>`).join('');
+}
+function hw(i){wish[i]=!wish[i];render()}
+function add(i){cart[i]=(cart[i]||0)+1;upd();document.getElementById('drawer').classList.add('open')}
+function chg(i,d){cart[i]=(cart[i]||0)+d;if(cart[i]<=0)delete cart[i];upd()}
+function upd(){
+ const ks=Object.keys(cart);let t=0,n=0,msg="Hello Kalyan & Parde, mujhe ye order karna hai:\n";
+ document.getElementById('items').innerHTML=ks.length?ks.map(k=>{const p=P[k],q=cart[k];t+=p[2]*q;n+=q;msg+=`- ${p[0]} x${q} = ₹${p[2]*q}\n`;return `<div class="it"><span>${p[0]}<br><small>₹${p[2]}</small></span><span><button onclick="chg(${k},-1)">−</button> ${q} <button onclick="chg(${k},1)">+</button></span></div>`}).join(''):'<p style="color:#888">Cart khaali hai.</p>';
+ msg+=`Total: ₹${t}`;
+ document.getElementById('cnt').textContent=n;document.getElementById('total').textContent='₹'+t.toLocaleString('en-IN');
+ document.getElementById('order').href='https://wa.me/918445044508?text='+encodeURIComponent(msg);
+}
+document.getElementById('cartBtn').onclick=()=>document.getElementById('drawer').classList.add('open');
+document.getElementById('close').onclick=()=>document.getElementById('drawer').classList.remove('open');
+document.getElementById('q').oninput=render;
+document.querySelectorAll('[data-f]').forEach(a=>a.onclick=()=>{filter=a.dataset.f;render()});
+document.getElementById('all').onclick=e=>{e.preventDefault();filter="";render()};
+let s=0;const bs=[b1,b2,b3],ds=[...document.querySelectorAll('#dots i')];
+function show(n){s=n;bs.forEach((b,i)=>b.style.opacity=i==n?1:0);ds.forEach((d,i)=>d.classList.toggle('on',i==n))}
+ds.forEach((d,i)=>d.onclick=()=>show(i));setInterval(()=>show((s+1)%3),5000);
+const IMG={};/* Asli photo lagane ke liye: IMG[0]='images/kaliyan1.jpg'; */
+function fab(id,base,acc,kind,seed){
+ const K=kind=='k',fr=K?3+seed%2:5+seed%3,rot=K?22:0;let d='',l='';
+ for(let j=0;j<32;j++){const x=j/31,t=.5+.5*Math.sin(x*6.283*fr+seed*1.7+.7*Math.sin(x*11+seed)),o=(x*100).toFixed(1);
+  d+=`<stop offset="${o}%" stop-color="#000" stop-opacity="${((1-t)*.6).toFixed(2)}"/>`;
+  l+=`<stop offset="${o}%" stop-color="#fff" stop-opacity="${(t**4*.4).toFixed(2)}"/>`}
+ const R=a=>`<rect width="200" height="125" ${a}/>`,gt=`gradientTransform="rotate(${rot} .5 .5)"`;
+ const mot=kind!='p'?`<pattern id="m${id}" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(${rot})"><path d="M7 1l5 6-5 6-5-6z" fill="none" stroke="${acc}" stroke-width=".7"/><circle cx="7" cy="7" r="1.3" fill="${acc}"/></pattern>`:'';
+ return `<defs><linearGradient id="d${id}" ${gt}>${d}</linearGradient><linearGradient id="l${id}" ${gt}>${l}</linearGradient>${mot}<filter id="f${id}"><feTurbulence type="fractalNoise" baseFrequency="${K?'.9':'.04 .9'}" numOctaves="2" seed="${seed}"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -.45"/></filter></defs>`
+  +R(`fill="${base}"`)+(kind!='p'?R(`fill="url(#m${id})" opacity=".55"`):'')+(K?`<rect y="104" width="200" height="6" fill="${acc}" opacity=".6"/>`:'')
+  +R(`fill="url(#d${id})"`)+R(`fill="url(#l${id})"`)+R(`filter="url(#f${id})" opacity=".45"`)
+  +(K?'':`<rect width="200" height="5" fill="#2a2018"/><rect y="5" width="200" height="5" fill="#000" opacity=".22"/><rect y="118" width="200" height="7" fill="#000" opacity=".18"/>`);
+}
+function cf(p,i){return IMG[i]?`<img src="${IMG[i]}" alt="${p[0]}" style="width:100%;height:100%;object-fit:cover;display:block">`:`<svg class="f" viewBox="0 0 200 125" preserveAspectRatio="none">${fab('p'+i,p[5],p[6],p[4]=='p'?'p':'k',i+1)}</svg>`}
+function cbg(k,cols){return `<svg class="cbg" viewBox="0 0 ${cols.length*100} 125" preserveAspectRatio="none">`+cols.map((c,i)=>`<svg x="${i*100}" width="100" height="125" viewBox="0 0 200 125" preserveAspectRatio="none">${fab('c'+k+i,c[0],c[1],k,i+2)}</svg>`).join('')+'</svg>'}
+document.getElementById('kaliyan').insertAdjacentHTML('afterbegin',cbg('k',[['#d6bd8f','#8a6428'],['#2f4a3a','#d8bf94'],['#cbb083','#7a5a2a'],['#6e1f2c','#d9b36c']]));
+document.getElementById('parde').insertAdjacentHTML('afterbegin',cbg('p',[['#e6d8bf','#b8a07a'],['#cdb594','#8a7458'],['#efe4d0','#c9b894'],['#8d8472','#5a5040'],['#2c241b','#6a5a44']]));
+function H(v,wall,cb,acc){return `<svg viewBox="0 0 1600 330" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="w${v}"><stop offset="0" stop-color="#0f0904"/><stop offset=".45" stop-color="${wall}"/><stop offset="1" stop-color="#7a5532"/></linearGradient><radialGradient id="vg${v}" cx=".6" cy=".5" r=".8"><stop offset=".5" stop-opacity="0"/><stop offset="1" stop-opacity=".55"/></radialGradient><filter id="b${v}"><feGaussianBlur stdDeviation="5"/></filter><filter id="B${v}"><feGaussianBlur stdDeviation="14"/></filter></defs><rect width="1600" height="330" fill="url(#w${v})"/><g filter="url(#B${v})" opacity=".7"><circle cx="90" cy="120" r="40" fill="#f2b866"/><circle cx="200" cy="60" r="22" fill="#f7d29a"/><circle cx="640" cy="40" r="28" fill="#e9b676"/><circle cx="760" cy="90" r="18" fill="#f2c88a"/></g><g filter="url(#b${v})"><path d="M520 330V215q0-40 40-40h480q40 0 40 40v115z" fill="#4b3622"/><rect x="560" y="215" width="150" height="75" rx="26" fill="#a98d68" transform="rotate(-12 635 250)"/><rect x="760" y="225" width="120" height="70" rx="24" fill="#8a6a46" transform="rotate(8 820 260)"/><ellipse cx="1030" cy="205" rx="50" ry="42" fill="#1f3322"/><ellipse cx="990" cy="238" rx="32" ry="24" fill="#2a4630"/></g><svg x="1090" width="360" height="330" viewBox="0 0 200 125" preserveAspectRatio="none">${fab('h'+v,cb,acc,'q',3+v)}</svg><rect width="1600" height="330" fill="url(#vg${v})"/></svg>`}
+b1.innerHTML=H(1,'#2b1d12','#3a2a1c','#c9a46c');b2.innerHTML=H(2,'#2a1216','#5a1f2b','#d9b36c');b3.innerHTML=H(3,'#33291d','#cdbfa5','#a88a55');
+render();upd();
+</script>
+</body>
+</html>
